@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14B25" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Device" representedClassName="Device" syncable="YES">
+        <attribute name="createdOnUtc" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="displayOrder" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="isCharging" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isIdle" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="lastConnectedOnUtc" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="currentData" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DeviceData" inverseName="device" inverseEntity="DeviceData" syncable="YES"/>
+        <relationship name="settings" maxCount="1" deletionRule="Nullify" destinationEntity="DeviceSetting" inverseName="device" inverseEntity="DeviceSetting" syncable="YES"/>
+    </entity>
+    <entity name="DeviceData" representedClassName="DeviceData" syncable="YES">
+        <attribute name="amperageDraw" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="batteryPercent" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="boardTemp" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="dataIndexId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="dateAddedUtc" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="isPluggedIn" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="mcuTemp" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="voltage" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="device" maxCount="1" deletionRule="Cascade" destinationEntity="Device" inverseName="currentData" inverseEntity="Device" syncable="YES"/>
+    </entity>
+    <entity name="DeviceSetting" representedClassName="DeviceSetting" syncable="YES">
+        <attribute name="lastChangedOnUtc" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="otherAttributes" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="showBatteryPercentage" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="showTemp" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="showVoltage" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="device" maxCount="1" deletionRule="Cascade" destinationEntity="Device" inverseName="settings" inverseEntity="Device" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Device" positionX="-954" positionY="-3685" width="128" height="178"/>
+        <element name="DeviceData" positionX="-1152" positionY="-3715" width="128" height="178"/>
+        <element name="DeviceSetting" positionX="-729" positionY="-3646" width="128" height="133"/>
+    </elements>
+</model>
