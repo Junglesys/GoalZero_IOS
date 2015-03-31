@@ -10,6 +10,8 @@
 #import "SettingsTableViewController.h"
 #import "SearchForDevicesViewController.h"
 #import "DeviceTableViewController.h"
+#import "SWRevealViewController.h"
+
 
 #import "Device.h"
 #import "DeviceSetting.h"
@@ -38,6 +40,12 @@ static const double newDataTransistionDuration = 0.30;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Setup popover menu
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    [self.menuPopoverBtn addTarget:self.revealViewController
+                            action:@selector(revealToggle:)
+                  forControlEvents:UIControlEventTouchUpInside];
     
     // Listen for current device data updates
     [GZDeviceService addDelegate:self];

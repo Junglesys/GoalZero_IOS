@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14B25" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14C109" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Device" representedClassName="Device" syncable="YES">
         <attribute name="createdOnUtc" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="displayOrder" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -22,6 +22,19 @@
         <attribute name="voltage" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <relationship name="device" maxCount="1" deletionRule="Cascade" destinationEntity="Device" inverseName="currentData" inverseEntity="Device" syncable="YES"/>
     </entity>
+    <entity name="DeviceFormat" syncable="YES">
+        <attribute name="baudRate" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="createdOnUtc" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tokens" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DeviceFormatToken" inverseName="deviceFormat" inverseEntity="DeviceFormatToken" syncable="YES"/>
+    </entity>
+    <entity name="DeviceFormatToken" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="systemName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="valueRegex" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="valueType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="deviceFormat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DeviceFormat" inverseName="tokens" inverseEntity="DeviceFormat" syncable="YES"/>
+    </entity>
     <entity name="DeviceSetting" representedClassName="DeviceSetting" syncable="YES">
         <attribute name="lastChangedOnUtc" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="otherAttributes" optional="YES" attributeType="Transformable" syncable="YES"/>
@@ -32,7 +45,9 @@
     </entity>
     <elements>
         <element name="Device" positionX="-954" positionY="-3685" width="128" height="178"/>
-        <element name="DeviceData" positionX="-1152" positionY="-3715" width="128" height="178"/>
+        <element name="DeviceData" positionX="-1181" positionY="-3697" width="128" height="178"/>
         <element name="DeviceSetting" positionX="-729" positionY="-3646" width="128" height="133"/>
+        <element name="DeviceFormatToken" positionX="-1622" positionY="-3751" width="128" height="118"/>
+        <element name="DeviceFormat" positionX="-1568" positionY="-3609" width="128" height="103"/>
     </elements>
 </model>

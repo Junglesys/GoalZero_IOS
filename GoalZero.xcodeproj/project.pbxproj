@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		360F492B1ACA570400E03021 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 360F492A1ACA570400E03021 /* SWRevealViewController.m */; };
 		3619C2E21A376C70002AE7A4 /* GZDeviceService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3619C2E11A376C70002AE7A4 /* GZDeviceService.m */; };
 		36267B0119DDD1EA003744FD /* GoalZero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 36267AFF19DDD1EA003744FD /* GoalZero.xcdatamodeld */; };
 		36267B1819DDD1EA003744FD /* GoalZeroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36267B1719DDD1EA003744FD /* GoalZeroTests.m */; };
@@ -141,6 +142,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		360F49291ACA570400E03021 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = ../../../Core/SupportingFiles/SWRevealViewController.h; sourceTree = "<group>"; };
+		360F492A1ACA570400E03021 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = ../../../Core/SupportingFiles/SWRevealViewController.m; sourceTree = "<group>"; };
 		3619C2E01A376C70002AE7A4 /* GZDeviceService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZDeviceService.h; sourceTree = "<group>"; };
 		3619C2E11A376C70002AE7A4 /* GZDeviceService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GZDeviceService.m; sourceTree = "<group>"; };
 		36267AF519DDD1EA003744FD /* GoalZero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoalZero.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -600,6 +603,8 @@
 		36F318CC19DE285200E38440 /* Initial */ = {
 			isa = PBXGroup;
 			children = (
+				360F49291ACA570400E03021 /* SWRevealViewController.h */,
+				360F492A1ACA570400E03021 /* SWRevealViewController.m */,
 				36F318D619DE296A00E38440 /* ViewController.h */,
 				36F318D719DE296A00E38440 /* ViewController.m */,
 			);
@@ -1179,6 +1184,7 @@
 				36F31B3419DE472500E38440 /* TyphoonTypeConverterRegistry.m in Sources */,
 				36F31B3719DE472500E38440 /* NSObject+DeallocNotification.m in Sources */,
 				36F31B3A19DE472500E38440 /* TyphoonSwizzler.m in Sources */,
+				360F492B1ACA570400E03021 /* SWRevealViewController.m in Sources */,
 				36F31B3619DE472500E38440 /* NSArray+TyphoonManualEnumeration.m in Sources */,
 				36F31AFD19DE472500E38440 /* TyphoonInjectionByCurrentRuntimeArguments.m in Sources */,
 				36F31B1719DE472500E38440 /* TyphoonCollaboratingAssemblyPropertyEnumerator.m in Sources */,
@@ -1318,7 +1324,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Seth Burch (LJ44VPEN53)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Seth Burch (LJ44VPEN53)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1360,6 +1367,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Seth Burch (LJ44VPEN53)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1384,7 +1392,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Seth Burch (LJ44VPEN53)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoalZero/Core/SupportingFiles/GoalZero-Prefix.pch";
@@ -1400,7 +1408,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Seth Burch (LJ44VPEN53)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoalZero/Core/SupportingFiles/GoalZero-Prefix.pch";

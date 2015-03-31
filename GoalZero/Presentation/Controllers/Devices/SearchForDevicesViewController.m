@@ -207,8 +207,8 @@ static NSString * const FadeTransitionKey = @"kCATransitionFade";
 
 - (IBAction)backBtnClicked:(id)sender
 {
-    AppDelegate * delegate = [UIApplication sharedApplication].delegate;
-    [delegate transistionToDashboardViewFromView:self.view];
+  //  AppDelegate * delegate = [UIApplication sharedApplication].delegate;
+    //[delegate transistionToDashboardViewFromView:self.view];
 }
 
 /*

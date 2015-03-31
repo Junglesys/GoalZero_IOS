@@ -125,7 +125,6 @@
     [receivedData appendString:data];
     
     
-    //
     // Data Example: YETI150 z 1404  1267v 0000i 0557tb 0567ti 0000p 0000a pre1 chg100 dsg1
     NSError  *error = nil;
     NSString *pattern = @".*([0-9]{4}).+([0-9]{4})v.+([0-9]{4})i.+([0-9]{4})tb.+([0-9]{4})ti.+chg([0-9]{1,3}).*dsg.*";

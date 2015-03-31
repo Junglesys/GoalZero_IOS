@@ -16,6 +16,9 @@
 
 // Top Navigation Bar
 @property (weak, nonatomic) IBOutlet UINavigationItem *mainNavigationbar;
+@property (weak, nonatomic) IBOutlet UIButton *menuPopoverBtn;
+
+
 @property (weak, nonatomic) IBOutlet UILabel *currentDeviceTitle;
 @property (weak, nonatomic) IBOutlet UILabel *currentTime;
 
@@ -25,7 +28,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *chargedPercentTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *chargePercentageLabelView;
 
-- (IBAction)panGesture:(UIPanGestureRecognizer *)sender;
+
 @property (weak, nonatomic) IBOutlet UIView *mainNavbar;
 
 -(IBAction)showSearchingForDevicesView;

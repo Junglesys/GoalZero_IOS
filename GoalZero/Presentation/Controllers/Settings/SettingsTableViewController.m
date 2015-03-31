@@ -7,6 +7,8 @@
 //
 
 #import "SettingsTableViewController.h"
+#import "SWRevealViewController.h"
+#import "DashboardViewController.h"
 
 @interface SettingsTableViewController ()
 
@@ -16,6 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // Setup popover menu
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -29,6 +34,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+/*
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -42,7 +49,8 @@
     // Return the number of rows in the section.
     return 0;
 }
-
+*/
+ 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
